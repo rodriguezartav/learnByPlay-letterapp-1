@@ -50,9 +50,7 @@ module.exports = {
     plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        SF_CLIENT_ID: JSON.stringify(process.env.SF_CLIENT_ID),
-        SF_REDIRECT_URL: JSON.stringify(process.env.SF_REDIRECT_URL),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
     }),
     new CleanWebpackPlugin(["dist/*.js","dist/*.css","dist/*.html","dist/*.map","dist/*.gz"], {verbose: true}),
@@ -80,7 +78,7 @@ module.exports = {
         minRatio: 0.8
       }),
    new CopyWebpackPlugin([
-               { from: 'assets',to: "assets" }
-           ])
+    { from: 'assets',to: "assets" }
+    ])
   ],
 };

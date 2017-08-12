@@ -53,9 +53,7 @@ module.exports = {
     plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify("development"),
-        SF_CLIENT_ID: JSON.stringify(process.env.SF_CLIENT_ID),
-        SF_REDIRECT_URL: JSON.stringify(process.env.SF_REDIRECT_URL),
+        NODE_ENV: JSON.stringify("development")
       }
     }),
     new webpack.HotModuleReplacementPlugin(),
