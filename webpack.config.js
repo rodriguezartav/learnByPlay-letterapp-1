@@ -9,7 +9,8 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: {
-    login: './apps/login/index.jsx'
+    home: './apps/home/index.jsx',
+    letter1: ['react-hot-loader/patch','webpack/hot/only-dev-server','webpack-dev-server/client?http://localhost:8080','./apps/letter1/index.jsx'],
   },
   output: {
     filename: '[name].js',
@@ -66,7 +67,7 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: './template.html',
         filename: 'index.html',
-        chunks: ['login','style'],
+        chunks: ['home','style'],
         inject: 'body'
       }),
 

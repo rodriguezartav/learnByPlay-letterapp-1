@@ -11,16 +11,14 @@ const render = (Component) => {
       <App {...window.__APP_INITIAL_STATE__} />
     </AppContainer>
 
-   , document.getElementById('root')
+   , document.getElementById('app')
   );
 };
 
-document.body.innerHTML += '<div id="root"></div>';
 render(App);
 
 if (module.hot){
   module.hot.accept('./container', () => {
-    console.log("r");
     render(App);
   })
 }

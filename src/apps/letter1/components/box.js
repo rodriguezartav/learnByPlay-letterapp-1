@@ -21,7 +21,7 @@ class Box extends React.Component {
     var colors = ["red","green","blue","yellow","red","green","blue","yellow","red","green","blue","yellow"];
     var pick = parseInt(Math.random()*10);
     var imageUrl = "http://via.placeholder.com/300x150";
-    if(this.props.images[this.props.count]) imageUrl = this.props.images[this.props.count].contentUrl;
+    if(this.props.images[this.props.count]) imageUrl = this.props.images[this.props.count];
     var cardClass = "card mb-4";
 
     if(this.state.flipped) cardClass+= " flipped";
@@ -30,8 +30,8 @@ class Box extends React.Component {
             <div style={{color: colors[pick] }} className="front letter mx-auto">
               {this.props.letter}
             </div>
-            <div className="back  ">
-              <img className="img-fluid" src={imageUrl}/>
+            <div className="back" style={{backgroundImage: "url('"+imageUrl+"')"}}>
+
             </div>
     </div>
     </div>

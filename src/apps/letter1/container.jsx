@@ -2,10 +2,10 @@ import React from 'react';
 import UI from "./uiController";
 import Business from "./business"
 
-import Style from '../../style.css';
+import Style from './style.css';
 import Box from "./components/box";
 
-class Container extends React.Component {
+class Letter1 extends React.Component {
 
   constructor(props) {
     super(props);
@@ -32,4 +32,4 @@ class Container extends React.Component {
 
 }
 
-export default Container;
+export default Letter1;
